@@ -33,6 +33,10 @@
 			@include('layouts/icons')
 		</section>
 
+    <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+		@include('layouts/newsletter')
+		</section>
+
     <footer class="ftco-footer ftco-section">
     @include('layouts/footer')
     </footer>

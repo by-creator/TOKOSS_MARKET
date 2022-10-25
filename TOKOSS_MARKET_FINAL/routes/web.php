@@ -112,6 +112,15 @@ Route::get('/user/create', [UserController::class, 'create'])->name('user.create
 
 Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
 
+/* CONTACT */
+
+Route::post('/user/contact', [UserController::class, 'contact'])->name('user.contact');
+
+/* NEWSLETTER */
+
+Route::post('/user/newsletter', [UserController::class, 'newsletter'])->name('user.newsletter');
+
+
 /* EDIT */
 
 Route::get('/user/edit/{id}', [App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');

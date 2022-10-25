@@ -17,7 +17,6 @@
 				</div>
             	</li>
 	          <li class="nav-item"><a href="{{route('about')}}" class="nav-link">À PROPOS</a></li>
-	          <li class="nav-item"><a href="{{route('blog')}}" class="nav-link">BLOG</a></li>
 	          <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">CONTACT</a></li>	          
 	          <li class="nav-item cta cta-colored"><a href="{{route('cart.list')}}" class="nav-link"><span class="icon-shopping_cart"></span></a></li>
 			  <li class="nav-item"><a href="{{route('connexion')}}" class="nav-link">CONNEXION / INSCRIPTION</a></li>

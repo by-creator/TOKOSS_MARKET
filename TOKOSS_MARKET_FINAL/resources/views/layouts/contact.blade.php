@@ -1,44 +1,46 @@
 <div class="container">
       	<div class="row d-flex mb-5 contact-info">
+          <h3>Contcatez-Nous</h3>
           <div class="w-100"></div>
           <div class="col-md-3 d-flex">
           	<div class="info bg-white p-4">
-	            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+	            <p><span>Addresse:</span><br> Avenue Cheick Anta Diop, Dakar, Sénégal</p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="info bg-white p-4">
-	            <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+	            <p><span>Phone:</span><a href="tel://+221776720018"><br> +221-77-672-00-18</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="info bg-white p-4">
-	            <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+	            <p><span>Email:</span> <a href="mailto:marcdamien04@gmail.com">marcdamien04@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-3 d-flex">
           	<div class="info bg-white p-4">
-	            <p><span>Website</span> <a href="#">yoursite.com</a></p>
+	            <p><span>Website :</span> <a href="{{route('index')}}"><br>tokoos_market</a></p>
 	          </div>
           </div>
         </div>
         <div class="row block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form action="#" class="bg-white p-5 contact-form">
+          <form action="{{ route('user.contact') }}" method="POST" enctype="multipart/form-data" class="billing-form">
+            @csrf
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" name="name" class="form-control" required placeholder="Entrez votre nom">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="email" name="email" class="form-control" required placeholder="Entrez votre adresse e-mail">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <input type="text" name="subject" class="form-control" required placeholder="Entrez un sujet">
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="message" id="" cols="30" rows="7" class="form-control" required placeholder="Entrez votre message"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="ENVOYER" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           

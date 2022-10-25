@@ -26,11 +26,6 @@
 			@include('layouts/category')
 		</section>
 
-   
-		
-		<section class="ftco-section img" style="background-image: url(../../template/images/bg_3.jpg);">
-    @include('layouts/img')
-    </section>
 
     <section class="ftco-section testimony-section">
     @include('layouts/testimony')
@@ -41,6 +36,10 @@
 		
 	<section class="ftco-section bg-light">
 			@include('layouts/icons')
+		</section>
+
+    <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+		@include('layouts/newsletter')
 		</section>
 
 

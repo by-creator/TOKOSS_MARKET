@@ -34,7 +34,7 @@
             	<h2 class="ftco-heading-2">Pour plus d'informations</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">Avenue Cheick Anta Diop, Daka, Sénégal</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Avenue Cheick Anta Diop, Dakar, Sénégal</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+221-77-672-00-18</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">marcdamienisidk@groupeisi.com</span></a></li>
 	              </ul>

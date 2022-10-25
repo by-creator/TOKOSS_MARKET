@@ -10,7 +10,11 @@ use App\Models\Command;
 use App\Models\ArchiveCommand;
 use App\Models\ArchiveStock;
 use App\Models\Stock;
+use App\Models\NewsLetter;
+use App\Mail\NewsLetterMail;
+use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -27,6 +31,40 @@ class UserController extends Controller
     public function passworderror()
     {
         return view('pages/connexion/passworderror');
+    }
+
+    public function contact(Request $request)
+    {
+        $name = $request->name;
+        $email = $request->email;
+        $subject = $request->subject;
+        $message = $request->message;
+        Mail::to('tokoss-market@gmail.com')->send(new ContactMail($name, $email, $subject, $message));
+        return redirect()->route('contact');
+    }
+
+    public function newsletter(Request $request)
+    {
+        
+        $newsletterData = NewsLetter::where('email', '=',$request->email)->get();
+
+        $n = $newsletterData->first();
+    
+        if($n!=null)
+        {
+            
+           return view('pages/user/newsletter_error');
+        }
+        elseif($n==null)
+        {
+            $newsletter = new NewsLetter();
+
+            $newsletter->email = $request->email;
+            $newsletter->save();
+            Mail::to($newsletter->email)->send(new NewsLetterMail());
+            return redirect()->route('index');
+            
+        }
     }
 
     public function delete(Request $request)
