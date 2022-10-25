@@ -1,7 +1,7 @@
 @component('mail::message')
 # RÉINITIALISATION DU MOT DE PASSE
 
-Bonjour,
+Bonjour {{$lastname}} {{$firstname}},
 
 Vous avez demandé une réinitialisation de votre mot de passe TOKOSS MARKET.
 

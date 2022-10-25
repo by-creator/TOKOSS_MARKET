@@ -35,7 +35,7 @@ class ConnexionController extends Controller
 
         if(isset($u))
         {
-            Mail::to($u->email)->send(new PasswordResetMail());
+            Mail::to($u->email)->send(new PasswordResetMail($u->lastname, $u->firstname));
 
             return view('pages/connexion/password_reset_success');
         }

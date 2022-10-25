@@ -1,9 +1,9 @@
 @component('mail::message')
 # VALIDATION COMMANDE TOKOSS MARKET
 
-Bonjour,
+Bonjour {{$lastname}} {{$firstname}},
 
-Vous avez une nouvelle commande de la plateforme TOKOSS MARKET.
+Vous avez une nouvelle commande concernant {{$trade_name}} depuis la plateforme TOKOSS MARKET.
 
 Pour terminer vos commandes :
 

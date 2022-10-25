@@ -1,7 +1,7 @@
 @component('mail::message')
 # VALIDATION COMMANDE TOKOSS MARKET
 
-Bonjour,
+Bonjour {{$lastname}} {{$firstname}},
 
 Votre commande a été enregistrée avec succès et sera traitée dans les 24h qui suivent.
 

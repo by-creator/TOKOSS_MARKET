@@ -124,8 +124,8 @@ class CommandController extends Controller
 
                 $user_vendor = User::find($data_command->user_id);
 
-                Mail::to($user_vendor->email)->send(new CommandVendorMail());
-                Mail::to($request->email)->send(new CommandClientMail());
+                Mail::to($user_vendor->email)->send(new CommandVendorMail($user_vendor->lastname,$user_vendor->firstname,$user_vendor->trade_name));
+                Mail::to($request->email)->send(new CommandClientMail($user->lastname,$user->firstname));
         
                 
 
