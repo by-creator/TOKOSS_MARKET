@@ -255,8 +255,17 @@ class ProductController extends Controller
     {
         //
         $product = Product::find($id);
+
+        if($product->user_id == 1)
+        {
+            return view('pages/product/edit',['product'=>$product]);
+        }
+        else
+        {
+            return view('pages/product/edit_vendor',['product'=>$product]);
+        }
         
-        return view('pages/product/edit',['product'=>$product]);
+        
     }
 
     /**

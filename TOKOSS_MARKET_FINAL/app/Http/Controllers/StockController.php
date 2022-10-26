@@ -31,7 +31,7 @@ class StockController extends Controller
 
             $archive_stock->save();
 
-            //$s->delete();
+            $s->delete();
 
             $userData = User::find($s->user_id);
         

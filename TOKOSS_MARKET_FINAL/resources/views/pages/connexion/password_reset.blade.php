@@ -31,7 +31,7 @@
           <div class="col-xl-7 ftco-animate">
 						<form form action="{{ route('connexion.password_reset_store') }}" method="POST" enctype="multipart/form-data" class="billing-form" class="billing-form">
 						@csrf	
-						<h3 class="mb-4 billing-heading">RÉINITIALISER VOTRE MOT DE MASSE</h3>
+						<h3 class="mb-4 billing-heading">RÉINITIALISER VOTRE MOT DE PASSE</h3>
 	          	<div class="row align-items-end">
 	          		
 	              <div class="col-md-6">

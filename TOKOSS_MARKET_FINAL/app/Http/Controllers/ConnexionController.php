@@ -72,7 +72,7 @@ class ConnexionController extends Controller
             {
                 $u->save();
 
-                return redirect()->route('connexion');
+                return view('pages/connexion/password_reset_success_ok');
             }
             else
             {

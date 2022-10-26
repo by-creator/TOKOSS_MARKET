@@ -58,7 +58,7 @@ class CommandController extends Controller
 
             $archive_command->save();
 
-            //$c->delete();
+            $c->delete();
 
             $userData = User::find($c->user_id);
         

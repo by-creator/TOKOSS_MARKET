@@ -30,10 +30,6 @@
               <input type="hidden" th:value="{{$state = App\Models\State::orderBy('name','asc')->get();}} ">
 
               <input type="hidden" name="id" class="form-control" value="{{$command->id}}">
-
-              <br>
-              <br>
-              <h3 class="mb-4 billing-heading">Détails du client</h3>
 	          	<div class="row align-items-end">
 	          		<div class="col-md-6">
 	                <div class="form-group">

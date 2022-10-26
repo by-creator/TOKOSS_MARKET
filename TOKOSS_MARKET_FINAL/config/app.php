@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'TOKOSS_MARKET'),
+    'name' => env('APP_NAME', 'TOKOSS MARKET'),
 
     /*
     |--------------------------------------------------------------------------
