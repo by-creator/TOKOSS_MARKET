@@ -40,8 +40,8 @@
 						        	
 						        	
 						        
-                              <td ><a class="btn btn-primary py-3 px-5" href="{{route('product.edit',['id'=>$product->id])}}" onClick = "return confirm('Voulez-vous supprimer cette catégorie?')">+</a></td>
-							  <td ><a class="btn btn-primary py-3 px-5" href="{{route('product.delete',['id'=>$product->id])}}" onClick = "return confirm('Voulez-vous supprimer cette catégorie?')">-</a></td>
+                              <td ><a class="btn btn-primary py-3 px-5" href="{{route('product.edit',['id'=>$product->id])}}" onClick = "return confirm('Voulez-vous supprimer ce produit?')">+</a></td>
+							  <td ><a class="btn btn-primary py-3 px-5" href="{{route('product.delete',['id'=>$product->id])}}" onClick = "return confirm('Voulez-vous supprimer ce produit?')">x</a></td>
 						          
 						    	
 

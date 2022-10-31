@@ -68,7 +68,7 @@
 						        	
 						        
 							  <td ><a class="btn btn-primary py-3 px-5" href="{{route('category.edit',['id'=>$category->id])}}" onClick = "return confirm('Voulez-vous supprimer cette catégorie?')">+</a></td>
-							  <td ><a class="btn btn-primary py-3 px-5" href="{{route('category.delete',['id'=>$category->id])}}" onClick = "return confirm('Voulez-vous supprimer cette catégorie?')">-</a></td>
+							  <td ><a class="btn btn-primary py-3 px-5" href="{{route('category.delete',['id'=>$category->id])}}" onClick = "return confirm('Voulez-vous supprimer cette catégorie?')">x</a></td>
 						         
 						    	
 
