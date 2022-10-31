@@ -23,6 +23,37 @@ class ProductController extends Controller
         return view('pages/product/product', compact('productData'));
     }
 
+    public function search(Request $request)
+    {
+        $name = $request->product_search;
+        $id = Session::get('id');
+        $user = User::find($id);
+        $search_condition = ['name'=> $name, 'user_id' => $id ];
+        $productData = product::where($search_condition)->get();
+
+        if(isset($productData))
+        {
+            
+            if($user->role_id == 1)
+            {   
+                
+                return view('pages/product/search_admin', compact('productData'));
+            }
+            else if($user->role_id == 3)
+            {
+                return view('pages/product/search_vendor', compact('productData'));
+            }
+            
+            
+        }
+        else
+        {
+            return redirect()->route('product.error');
+        }
+
+       
+    }
+
     public function admin_order()
     {
         return view('pages/product/admin_order');
@@ -138,7 +169,7 @@ class ProductController extends Controller
         }
       
 
-        $data->name= $request->name;
+        $data->name= strtoupper($request->name);
 
         $data->description= $request->description;
 
@@ -146,22 +177,25 @@ class ProductController extends Controller
 
         $data->price= $request->price;
 
-        $data->user_id= Session::get('id');
+        $data->user_id = Session::get('id');
 
         $data->category_id= $request->category;
 
         $user = User::find($data->user_id);
 
-        $data->save();
+          
+            $data->save();
 
-        if($user->role_id == 1)
-        {
-            return view('pages/index/index_admin');
-        }
-        else if($user->role_id == 3)
-        {
-            return view('pages/index/index_vendor');
-        }
+            if($user->role_id == 1)
+            {
+                return view('pages/index/index_admin');
+            }
+            else if($user->role_id == 3)
+            {
+                return view('pages/index/index_vendor');
+            }
+        
+      
     }
 
 
@@ -208,7 +242,7 @@ class ProductController extends Controller
         }
       
 
-        $data['name']= $request->name;
+        $data['name']= strtoupper($request->name);
 
         $data['description']= $request->description;
 
@@ -221,17 +255,19 @@ class ProductController extends Controller
         $data['category_id']= $request->category;
 
         $user = User::find($data['user_id']);
+            
+            $data->save();
 
-        $data->save();
-
-        if($user->role_id == 1)
-        {
-            return view('pages/index/index_admin');
-        }
-        else if($user->role_id == 3)
-        {
-            return view('pages/index/index_vendor');
-        }
+            if($user->role_id == 1)
+            {
+                return view('pages/index/index_admin');
+            }
+            else if($user->role_id == 3)
+            {
+                return view('pages/index/index_vendor');
+            }
+       
+        
     }
 
     /**

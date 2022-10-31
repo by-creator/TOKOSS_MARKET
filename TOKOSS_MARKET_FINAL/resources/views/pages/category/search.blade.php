@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="/">ACCUEIL</a></span> <span>//</span> <span>AJOUT DE PRODUITS</span></p>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="/">ACCUEIL</a></span> <span>//</span> <span>RECHERCHE DE CATÉGORIE</span></p>
             <h1 class="mb-0 bread">GESTION DE CATEGORIE</h1>
           </div>
         </div>
@@ -67,8 +67,8 @@
 						        	
 						        	
 						        
-							  <td class="product-remove"><a href="#" onClick = "return confirm('Voulez-vous supprimer ce produit ?')"><span class="ion-ios-brush"></span></a></td>
-							  <td class="product-remove"><a href="#" onClick = "return confirm('Voulez-vous supprimer ce produit ?')"><span class="ion-ios-close"></span></a></td>
+							  <td ><a class="btn btn-primary py-3 px-5" href="{{route('category.edit',['id'=>$category->id])}}" onClick = "return confirm('Voulez-vous supprimer cette catégorie?')">+</a></td>
+							  <td ><a class="btn btn-primary py-3 px-5" href="{{route('category.delete',['id'=>$category->id])}}" onClick = "return confirm('Voulez-vous supprimer cette catégorie?')">-</a></td>
 						         
 						    	
 

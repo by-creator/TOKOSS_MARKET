@@ -45,12 +45,21 @@ class CategoryController extends Controller
     public function updates(Request $request)
     {
         $category = Category::find($request->id);
-        $category->name = $request->get('name');
-        
+        $category->name = strtoupper($request->get('name'));
 
-        $category->save();
+        $categoryData = Category::where('name', '=',$request->get('name'))->get();
 
-        return redirect()->route('category.create');
+        if(isset($categoryData))
+        {
+            return view('pages/category/exist');
+        }
+        else
+        {
+            $data->save();
+
+            return redirect()->route('category.create');
+        }
+    
     }
 
     /**
@@ -90,11 +99,22 @@ class CategoryController extends Controller
         //
         $data= new Category();
 
-        $data['name']= $request->category;
+        $data['name']= strtoupper($request->category);
 
-        $data->save();
+        $categoryData = Category::where('name', '=',$request->category)->get();
 
-        return redirect()->route('category.create');
+        if(isset($categoryData))
+        {
+            return view('pages/category/exist');
+        }
+        else
+        {
+            $data->save();
+
+            return redirect()->route('category.create');
+        }
+
+       
     }
 
     /**

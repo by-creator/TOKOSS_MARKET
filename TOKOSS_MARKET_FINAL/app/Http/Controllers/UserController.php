@@ -35,7 +35,7 @@ class UserController extends Controller
 
     public function contact(Request $request)
     {
-        $name = $request->name;
+        $name = strtoupper($request->name);
         $email = $request->email;
         $subject = $request->subject;
         $message = $request->message;

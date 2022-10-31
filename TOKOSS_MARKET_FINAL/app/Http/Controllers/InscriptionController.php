@@ -53,8 +53,8 @@ class InscriptionController extends Controller
 
         $role_id = Role::find(3);
         
-        $data['firstname']= $request->firstname;
-        $data['lastname']= $request->lastname;
+        $data['firstname']= strtoupper($request->firstname);
+        $data['lastname']= strtoupper($request->lastname);
         $data['adress']= $request->adress;
         $data['city']= $request->city;
         $data['tel']= $request->tel;

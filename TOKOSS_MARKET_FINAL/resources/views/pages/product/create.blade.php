@@ -99,6 +99,29 @@
 </section>
 
 <section class="ftco-section ftco-product">
+<div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-7 ftco-animate">
+						<form action="{{ route('category.search') }}" method="POST" enctype="multipart/form-data" class="billing-form">
+						@csrf
+	          	<div class="row align-items-end">
+	          		<div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="category">Rechercher une catégorie</label>
+	                  <input name="category_search" type="text" class="form-control" required="Ce champ est obligatoire" placeholder="Entrez le nom d'une catégorie">
+	                </div>
+	              </div>
+
+				  <div class="form-group">
+							<input type="submit" value="VALIDER" class="btn btn-primary py-3 px-5">
+						</div>
+	          	    
+          		</div>
+			 
+				  </form>	
+    			</div>
+    		</div>
+    	</div>
 			<div class="container">
 				<div class="row">
     			<div class="col-md-12 ftco-animate">
