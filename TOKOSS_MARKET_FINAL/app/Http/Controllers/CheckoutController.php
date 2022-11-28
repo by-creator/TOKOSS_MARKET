@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 use App\Models\Product;
+use App\Models\User;
 
 class CheckoutController extends Controller
 {
@@ -39,6 +40,26 @@ class CheckoutController extends Controller
        
 
         return view('pages/checkout/create');
+    }
+
+    public function search_store(Request $request)
+    {
+        $userData = User::where('email', '=',$request->email)->get();
+
+        $search_user = $userData->first();
+
+        $cartData = Cart::all();
+
+        if(isset($search_user))
+        {
+            return view('pages/checkout/search_store',['search_user'=>$search_user, 'cartData'=>$cartData]);
+        }
+        else
+        {
+            return view('pages/checkout/search_error');
+        }
+
+        
     }
 
     /**

@@ -26,16 +26,46 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-7 ftco-animate">
+		  <h3 class="mb-4 billing-heading" align="center">Détails de la commande</h3>
+		
+		  <br>
+
+		  <form action="{{ route('checkout.search_store') }}" method="POST" enctype="multipart/form-data" class="billing-form">
+			@csrf
+							<h3 class="mb-4 billing-heading">Vous avez déjà passé une commande ici ?</h3>
+
+	          	<div class="row align-items-end">
+
+			
+	              <div class="col-md-6">
+	                <div class="form-group">
+	                	<label for="email">Email </label>
+	                  <input name="email" type="email" class="form-control" placeholder="Entrer votre email" required="Ce champ est obligatoire">
+	                </div>
+                </div>
+                <div class="w-100"></div>
+				<div class="form-group">
+							<input type="submit" value="RECHERCHER" class="btn btn-primary py-3 px-5">
+						</div>
+	            </div>
+	          </form><!-- END -->
+
+
 		  <form action="{{ route('command.store') }}" method="POST" enctype="multipart/form-data" class="billing-form">
 			@csrf
-							<h3 class="mb-4 billing-heading">Détails de la commande</h3>
+							
 	          	<div class="row align-items-end">
-	          		<div class="col-md-6">
+
+				
+
+
+				  <div class="col-md-6">
 	                <div class="form-group">
 	                	<label for="firstname">Prénom(s)</label>
 	                  <input name="firstname" type="text" class="form-control" placeholder="Entrer votre prénom" required="Ce champ est obligatoire">
 	                </div>
 	              </div>
+
 	              <div class="col-md-6">
 	                <div class="form-group">
 	                	<label for="lastname">Nom</label>

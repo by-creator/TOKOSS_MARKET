@@ -15,7 +15,7 @@
 		    <p>Pour retourner au menu principal </p>
            
 				  <div class="form-group">
-                  <a href="/" class="btn btn-primary">CLIQUEZ ICI</a>
+                  <a href="{{route('shop')}}" class="btn btn-primary">CLIQUEZ ICI</a>
 						</div>
 	          	    
           		</div>

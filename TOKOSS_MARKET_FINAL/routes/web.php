@@ -295,6 +295,10 @@ Route::get('/checkout/create', [CheckoutController::class, 'create'])->name('che
 
 Route::post('/checkout/store', [CheckoutController::class, 'store'])->name('checkout.store');
 
+/* SEARCH STORE */
+
+Route::post('/checkout/search_store', [CheckoutController::class, 'search_store'])->name('checkout.search_store');
+
 /* SUCCESS */
 
 Route::get('/checkout/success', [CheckoutController::class, 'success'])->name('checkout.success');

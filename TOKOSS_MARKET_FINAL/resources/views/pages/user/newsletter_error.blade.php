@@ -12,7 +12,7 @@
           <h3>L'adresse email saise est déjà enregistrée pour un compte existant .</p>
 	          	
 				  <div class="form-group">
-                  <a href="{{route('about')}}" class="btn btn-primary">RETOUR</a>
+                  <a href="/" class="btn btn-primary">RETOUR</a>
 						</div>
 	          	    
           		</div>
