@@ -103,7 +103,7 @@ class CategoryController extends Controller
 
         $categoryData = Category::where('name', '=',$request->category)->get();
 
-        if(isset($categoryData))
+        if(!isset($categoryData))
         {
             return view('pages/category/exist');
         }
